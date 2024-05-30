@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+}
+
+nav{
+    background-color: darkred;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.quo {
+    color:bisque;
+    font-size: 20px;
+    margin-right: 45px;
+}
+
+body {
+    background-color: white;
+}
+
+.div-atas-kiri, .div-atas-kanan{
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.div-atas-kiri ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.div-atas-kiri ul li img{
+    width: 28px;
+    margin: 0 15px;
+    border-radius: 50px;
+}
+
+.div-atas-kanan{
+    width: fit-content;
+}
+
+
+.fotoprofil img{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fotoprofil{
+    margin-left: 30px;
+}
+
+.cari{
+    background: #efefef;
+    width: 350px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.cari img{
+    width: 18px;
+}
+
+.cari input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+}
+.online{
+    position: relative;
+}
+
+.online::after{
+    content:'';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background: #41db51;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5%;
+}
+
+.kiri_sisi{
+    flex-basis: 20%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+}
+
+.konten{
+    flex-basis: 90%;
+    position: relative;
+    margin-right: 35px;
+    height: 100;
+}
+
+.shortcut a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: fit-content;
+    color: darkred;
+}
+
+.shortcut a img{
+    width: 40px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.shortcut{
+    border-bottom: 1px solid darkred;
+}
+
+.shortcut p{
+    margin: 25px 0;
+    color: darkred;
+    font-weight: 500;
+}
+
+.konten{
+    width: 100%;
+    background: whitesmoke;
+    border-radius: 6px;
+    padding: 20px;
+    columns: darkred;
+    height: 100vh;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.user img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user p{
+    margin-bottom: -5px;
+    font-weight: 500;
+}
+
+.user span{
+    font-size: 12px;
+}
+
+.nulis{
+    padding-left: 55px;
+    margin: 10px 0;
+    background-color: darkred;
+    
+}
+
+.nulis textarea{
+    width: 100%;
+    margin: 5px 0;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #000000;
+    background: transparent;
+    resize: none;
+}
+
+
+
+
