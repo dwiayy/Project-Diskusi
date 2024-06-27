@@ -1,0 +1,165 @@
+s<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quora-like Layout</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #202020;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo {
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .menu {
+            display: flex;
+            gap: 20px;
+            margin-left: 30px;
+        }
+
+        .navbar .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar .menu a:hover {
+            color: red;
+        }
+
+        .navbar .profile {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .content {
+            padding: 20px;
+        }
+
+        .content .welcome {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .content .welcome h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content .spaces {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .content .spaces .space {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .content .spaces .space img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .content .spaces .space h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .content .spaces .space p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .footer {
+            background-color: #202020;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .footer p {
+            margin: 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Quorun</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Spaces</a>
+            <a href="#">Notifications</a>
+        </div>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile">
+            <button style="background-color: red; border: none; color: white; padding: 10px 20px; border-radius: 5px;">Tambah pertanyaan</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="welcome">
+            <h2>Selamat datang di Ruang Obrolan!</h2>
+            <p>Ikuti Ruang Obrolan untuk menjelajahi minat Anda di Quo-Run.</p>
+            <button style="background-color: #555; border: none; color: white; padding: 10px 20px; border-radius: 5px;">Buat ruang</button>
+            <button style="background-color: #555; border: none; color: white; padding: 10px 20px; border-radius: 5px;">Temukan ruang</button>
+        </div>
+
+        <div class="spaces">
+            <div class="space">
+                <img src="self_improvement.jpg" alt="Self Improvement">
+                <h3>Pengembangan Diri</h3>
+                <p>Pengembangan diri menjadi lebih baik setiap harinya.</p>
+            </div>
+            <div class="space">
+                <img src="online_money.jpg" alt="Online Money">
+                <h3>Uang Online</h3>
+                <p>Berbagi pengalaman cara menghasilkan uang secara online dari berbagai sumber.</p>
+            </div>
+            <div class="space">
+                <img src="smart_literacy.jpg" alt="Smart Literacy">
+                <h3>Literasi Cerdas</h3>
+                <p>Spaces berisi informasi pengetahuan.</p>
+            </div>
+            <div class="space">
+                <img src="be_good_looking.jpg" alt="Be Good Looking">
+                <h3>Be Good Looking</h3>
+                <p>Tips & trik serta inspirasi agar makin cantik/tampan.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 <Quo-Run></Quo-Run></p>
+    </div>
+</body>
+</html>
