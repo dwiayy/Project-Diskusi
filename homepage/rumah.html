@@ -3,132 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="HomeStyle.css">
+    <title>QuoRun | Home</title>
+    <style>
+
+        #bar1 {
+            height: 100px;
+            background-color: rgb(59, 89, 152);
+            color: rgb(255, 255, 255);
+            padding: 15px;
+        }
+
+        span{
+            color: black;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            background-color: white;
+            margin-inline: 8em ;
+        }
+
+        #bar2{
+            background-color: white;
+            margin: auto;
+            height: 29em;
+            width: 55em;
+        }
+
+        #uploader {
+            background-color: black;
+            height: 4em;
+            width: 50em;
+            margin: auto;
+        }
+        
+        a{
+            padding-bottom: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            padding: 2%;
+        }
+
+        #uploaded {
+            padding-top: 3px;
+            background-color: black;
+            height: 4em;
+            width: 50em;
+            margin-top: 2em;
+            margin: auto;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="div_atas_kiri">
-                <ul>
-                <li class="quo"><h2>Quo-Run</h2></li>
-                <ul class="shortcuts">
-                <li><a href="rumah.html">Home</a></li>
-                <li><a href="qna.html">QnA</a></li>
-                <li><a href="group.html">Group</a></li>
-                <li><a href="notification.html">Notifications</a></li>
-                </ul>
-            </ul>
-        </div>
-        <div class="div-atas-kanan">
-            <div class="fotoprofil online">
-                <img src="\FolderFoto\member-2.png">
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="konten">
-            <div class="user">
-                <img src="\FolderFoto\member-1.png" alt="">
-                <div>
-                    <p>Nicholas</p>
-                    <span>29 Mei 1987, 08.19 AM</span>
-                </div>
-            </div>
-            <div class="nulis">
-                <a href="#"><img src="\FolderFoto\feed-image-1.png"></a>
-            </div>
-            <div>
-                <h2 class="feed"><strong>Berapa modal pertamamu saat kamu memulai usaha pertama?</strong></h2>
-            </div>
-            <div>
-                <p class="isi">100 ribu, plus the power of kevevet. Tahun lalu pas covid, jualan peyek ikutan surut. Ditambah lagi harga minyak goreng yang terus naik tapi tidak mau turun-turun. Mulai harga 28.000/2L, ditunggu beberapa bulan malah semakin nembus 50.000++/2L
-                    Tabungan udah habis, tapi duit tinggal 100 ribu saja. Langsung ajak istri berembuk, nyari ide jualan apa yang ngga perlu pake minyak goreng.
-                    <br><br>
-                    Akhirnya diputuskan buat usaha bubur ayam, karena ngga perlu pakai minyak goreng. Langsung sat set sat set, buka grup Facebook LANGSUNG ENAK (LE), buka cookpad daftar yang premium, YouTube cari resep dari para penjual bubur dan resep dari selebritis chef. Terus diambil kelebihannya dari tiap-tiap resep. Setengah hari full survey, langsung sat set sat set lagi lakuin trial error.
-                    <br><br>
-                    Hasilnya? Error! Coba terus sampe 3x, baru bisa jadi lebih baik dan lebih enak hasilnya.
-                    Hari kedua Langsung eksekusi jualan, pake alat seadanya yang ada di rumah kontrakan. Pake meja kayu biasa, tutupin pake banner. Wadah topping pake toples seadanya. Buburnya juga ngga pake dandang, tapi pake termos bekas. Eehh, ga sampe 2 minggu kok mejanya jatuh kesenggol motor pas mau ngirim pesanan. Langsung lemes dengkulnya 😂😂😂
-                </p>
-                    
-                 <textarea rows="" placeholder="Berikan Comment"></textarea>
-            </div>
-
-        </div>
+<body style="font-family: Lucida Sans; background-color: rgb(175, 172, 167);">
+    <div id="bar1">
+        <div style="font-size: 40px; color: white; margin-bottom: 13px;">QuoRun</div>
+        <a href="rumah.html"><span>Home</span></a>
+        <a href="qna.html"><span>QnA</span></a>
+        <a href="group.html"><span>Group</span></a>
+        <a href="notification.html"><span>Notification</span></a>
     </div>
 
 
-    <div class="container">
-        <div class="konten">
-            <div class="user">
-                <img src="\FolderFoto\member-2.png" alt="">
-                <div>
-                    <p>Folas</p>
-                    <span>29 Mei 1334, 08.19 AM</span>
-                </div>
-            </div>
-            <div class="nulis">
-                <a href="#"><img src="\FolderFoto\feed-image-2.png"></a>
-            </div>
-            <div>
-                <h2 class="feed"><strong>Berapa modal pertamamu saat kamu memulai usaha pertama?</strong></h2>
-            </div>
-            <div>
-                <p class="isi">100 ribu, plus the power of kevevet. Tahun lalu pas covid, jualan peyek ikutan surut. Ditambah lagi harga minyak goreng yang terus naik tapi tidak mau turun-turun. Mulai harga 28.000/2L, ditunggu beberapa bulan malah semakin nembus 50.000++/2L
-                    Tabungan udah habis, tapi duit tinggal 100 ribu saja. Langsung ajak istri berembuk, nyari ide jualan apa yang ngga perlu pake minyak goreng.
-                    <br><br>
-                    Akhirnya diputuskan buat usaha bubur ayam, karena ngga perlu pakai minyak goreng. Langsung sat set sat set, buka grup Facebook LANGSUNG ENAK (LE), buka cookpad daftar yang premium, YouTube cari resep dari para penjual bubur dan resep dari selebritis chef. Terus diambil kelebihannya dari tiap-tiap resep. Setengah hari full survey, langsung sat set sat set lagi lakuin trial error.
-                    <br><br>
-                    Hasilnya? Error! Coba terus sampe 3x, baru bisa jadi lebih baik dan lebih enak hasilnya.
-                    Hari kedua Langsung eksekusi jualan, pake alat seadanya yang ada di rumah kontrakan. Pake meja kayu biasa, tutupin pake banner. Wadah topping pake toples seadanya. Buburnya juga ngga pake dandang, tapi pake termos bekas. Eehh, ga sampe 2 minggu kok mejanya jatuh kesenggol motor pas mau ngirim pesanan. Langsung lemes dengkulnya 😂😂😂
-                </p>
-                    
-                 <textarea rows="" placeholder="Berikan Comment"></textarea>
-            </div>
-
-            <div class="container">
-                <div class="konten">
-                    <div class="user">
-                        <img src="\FolderFoto\member-3.png" alt="">
-                        <div>
-                            <p>Nicho</p>
-                            <span>29 Mei 1944, 08.19 AM</span>
-                        </div>
-                    </div>
-                    <div class="nulis">
-                        <a href="#"><img src="\FolderFoto\feed-image-3.png"></a>
-                    </div>
-                    <div>
-                        <h2 class="feed"><strong>Berapa modal pertamamu saat kamu memulai usaha pertama?</strong></h2>
-                    </div>
-                    <div>
-                        <p class="isi">100 ribu, plus the power of kevevet. Tahun lalu pas covid, jualan peyek ikutan surut. Ditambah lagi harga minyak goreng yang terus naik tapi tidak mau turun-turun. Mulai harga 28.000/2L, ditunggu beberapa bulan malah semakin nembus 50.000++/2L
-                            Tabungan udah habis, tapi duit tinggal 100 ribu saja. Langsung ajak istri berembuk, nyari ide jualan apa yang ngga perlu pake minyak goreng.
-                            <br><br>
-                            Akhirnya diputuskan buat usaha bubur ayam, karena ngga perlu pakai minyak goreng. Langsung sat set sat set, buka grup Facebook LANGSUNG ENAK (LE), buka cookpad daftar yang premium, YouTube cari resep dari para penjual bubur dan resep dari selebritis chef. Terus diambil kelebihannya dari tiap-tiap resep. Setengah hari full survey, langsung sat set sat set lagi lakuin trial error.
-                            <br><br>
-                            Hasilnya? Error! Coba terus sampe 3x, baru bisa jadi lebih baik dan lebih enak hasilnya.
-                            Hari kedua Langsung eksekusi jualan, pake alat seadanya yang ada di rumah kontrakan. Pake meja kayu biasa, tutupin pake banner. Wadah topping pake toples seadanya. Buburnya juga ngga pake dandang, tapi pake termos bekas. Eehh, ga sampe 2 minggu kok mejanya jatuh kesenggol motor pas mau ngirim pesanan. Langsung lemes dengkulnya 😂😂😂
-                        </p>
-                            
-                         <textarea rows="" placeholder="Berikan Comment"></textarea>
-                    </div>
-                
-
-    
-
-    
-
+    <div id="bar2">
+         
+        <div id="uploader">
+            <a href="#"><img src="/FolderFoto/member-1.png"></a>
+            <a style="font-size: 15px; color: white;" href="#">Valencia Susanto</a>
+            <a style="font-size: 10px; color: rgb(0, 139, 226);" href="#">Follow</a>
         </div>
+        
+        <div id="uploaded">
+            <a href="#"><span>Mengapa kita dihidupkan di dunia?</span></a>
+            <a href="#"><span>
+                assssssssssssssadajfksjfosi;gjlzdorgizlkvfdbr <br>
+                jajdklejfklwejrgfjerlgjj <br>
+                kjnfgnkfngEoarkkskdskfkspfre <br>
+            </span></a>
+        </div>
+
     </div>
-
-
-
-
-
-    
-    <script src="script.js"></script>
 
 
 </body>
