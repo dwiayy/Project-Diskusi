@@ -3,92 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuoRun | Home</title>
-    <style>
+    <title>QuoRun Q&A</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(175, 172, 167);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-        #bar1 {
-            height: 100px;
-            background-color: rgb(59, 89, 152);
-            color: rgb(255, 255, 255);
-            padding: 15px;
-        }
+/* BLUE BAR===================================================================================*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b5998;
+    padding: 10px 20px;
+    color: white;
+}
 
-        span{
-            color: black;
-            display: inline-block;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            background-color: white;
-            margin-inline: 8em ;
-        }
+header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.5em;
+    font-size: 1.5em;
+}
 
-        #bar2{
-            background-color: white;
-            margin: auto;
-            height: 29em;
-            width: 55em;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
-        #uploader {
-            background-color: black;
-            height: 4em;
-            width: 50em;
-            margin: auto;
-        }
-        
-        a{
-            padding-bottom: 1rem;
-            justify-content: center;
-            align-items: center;
-        }
+#search_box {
+    width: 400px;
+    height: 20px;
+}
 
-        img {
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            padding: 2%;
-        }
+nav li {
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto 20px;
+    cursor: pointer;
+}
 
-        #uploaded {
-            padding-top: 3px;
-            background-color: black;
-            height: 4em;
-            width: 50em;
-            margin-top: 2em;
-            margin: auto;
-        }
-    </style>
+#blue_bar_btn:hover{
+    background-color: black;
+}
+
+/* BLUE BAR=================================================================================== */
+
+main {
+    padding: 20px;
+}
+
+#feed {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+</style>
+
 </head>
-<body style="font-family: Lucida Sans; background-color: rgb(175, 172, 167);">
-    <div id="bar1">
-        <div style="font-size: 40px; color: white; margin-bottom: 13px;">QuoRun</div>
-        <a href="rumah.html"><span>Home</span></a>
-        <a href="qna.html"><span>QnA</span></a>
-        <a href="group.html"><span>Group</span></a>
-        <a href="notification.html"><span>Notification</span></a>
-    </div>
+<body style="background-color: rgb(175, 172, 167); background-image: url(FolderFoto/bglogin.jpg);">
+    <header>
+        <h1>Quo-Run</h1>
+        <nav>
+            <ul style="padding-right: 1em;">
+                <li><input type="text" id="search_box" placeholder="Looking for something?"></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="rumah.html">Home</a></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="notification.html">Notification</a></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="qna.html">Q&A</a></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="group.html">Group</a></li>
+                <a href="profil.html"><img src="/FolderFoto/member-6.png" style="width: 40px; float: right; border-radius: 50%; padding: 4px;"></a>
+            </ul>
+        </nav>
+    </header>
 
 
-    <div id="bar2">
-         
-        <div id="uploader">
-            <a href="#"><img src="/FolderFoto/member-1.png"></a>
-            <a style="font-size: 15px; color: white;" href="#">Valencia Susanto</a>
-            <a style="font-size: 10px; color: rgb(0, 139, 226);" href="#">Follow</a>
-        </div>
-        
-        <div id="uploaded">
-            <a href="#"><span>Mengapa kita dihidupkan di dunia?</span></a>
-            <a href="#"><span>
-                assssssssssssssadajfksjfosi;gjlzdorgizlkvfdbr <br>
-                jajdklejfklwejrgfjerlgjj <br>
-                kjnfgnkfngEoarkkskdskfkspfre <br>
-            </span></a>
-        </div>
-
-    </div>
-
-
+    <main>
+        <section>
+            <div id="feed">
+                <h2>Pernahkan kamu merasa canggung ngobrol sama orang tua?</h2>
+                <div class="details">
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
+

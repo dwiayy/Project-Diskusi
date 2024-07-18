@@ -7,12 +7,13 @@
 <style>
     body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color:rgb(175, 172, 167);
     color: #333;
     margin: 0;
     padding: 0;
 }
 
+/* BLUE BAR===================================================================================*/
 header {
     display: flex;
     justify-content: space-between;
@@ -24,8 +25,8 @@ header {
 
 header h1 {
     font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    font-size: 2em;
+    margin: 0.5em;
+    font-size: 1.5em;
 }
 
 nav ul {
@@ -35,11 +36,21 @@ nav ul {
     padding: 0;
 }
 
+#search_box {
+    width: 400px;
+    height: 20px;
+}
+
 nav li {
     font-family: 'Times New Roman', Times, serif;
-    margin: 0 10px;
+    margin: auto 20px;
     cursor: pointer;
 }
+
+#blue_bar_btn:hover{
+    background-color: black;
+}
+/* BLUE BAR=================================================================================== */
 
 main {
     padding: 20px;
@@ -72,7 +83,7 @@ main {
 
 .details span {
     font-size: 14px;
-    color: #999;
+    color:  #3b5998;
 }
 
 .actions {
@@ -96,15 +107,17 @@ main {
 </style>
 
 </head>
-<body>
+<body style="background-color: rgb(175, 172, 167); background-image: url(FolderFoto/bglogin.jpg);">
     <header>
         <h1>Quo-Run</h1>
         <nav>
-            <ul>
-                <li>Home</li>
-                <li>Notification</li>
-                <li>Q&A</li>
-                <li>Group</li>
+            <ul style="padding-right: 1em;">
+                <li><input type="text" id="search_box" placeholder="Looking for something?"></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="rumah.html">Home</a></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="notification.html">Notification</a></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="qna.html">Q&A</a></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="group.html">Group</a></li>
+                <a href="profil.html"><img src="/FolderFoto/member-6.png" style="width: 40px; float: right; border-radius: 50%; padding: 4px;"></a>
             </ul>
         </nav>
     </header>
@@ -113,8 +126,8 @@ main {
             <div class="question">
                 <h2>Kamu lebih menyukai keramaian atau kesunyian?</h2>
                 <div class="details">
-                    <span>54 jawaban</span>
-                    <span>Terakhir Diikuti Sen</span>
+                    <span>54 Answers</span>
+                    <span>Last followed in yesterday</span>
                     <div class="actions">
                         <button class="btn">Mark as Read</button>
                     </div>
@@ -123,23 +136,82 @@ main {
             <div class="question">
                 <h2>Apakah flexing/pamer itu penting? Seberapa pentingkah flexing dalam hidup kita? Dan apakah manfaat flexing?</h2>
                 <div class="details">
-                    <span>15 jawaban</span>
-                    <span>Terakhir Diikuti 2 Jul</span>
+                    <span>15 Answers</span>
+                    <span>Last followed in 29 June</span>
                     <div class="actions">
                         <button class="btn">Mark as Read</button>
                     </div>
                 </div>
             </div>
+
             <div class="question">
                 <h2>Apa saja sikap sederhana yang banyak di sukai orang?</h2>
                 <div class="details">
-                    <span>11 jawaban</span>
-                    <span>Terakhir Diikuti Sab</span>
+                    <span>11 Answers</span>
+                    <span>Last followed in 13 June</span>
                     <div class="actions">
                         <button class="btn">Mark as Read</button>
                     </div>
                 </div>
             </div>
+
+            <div class="question">
+                <h2>Kenapa harus menjadi orang baik?</h2>
+                <div class="details">
+                    <span>120 Answers</span>
+                    <span>Last followed in 3 January</span>
+                    <div class="actions">
+                        <button class="btn">Mark as Read</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>Apa saja hal terpenting bagimu di umur 40an?</h2>
+                <div class="details">
+                    <span>209 Answers</span>
+                    <span>Last followed in 23 January</span>
+                    <div class="actions">
+                        <button class="btn">Mark as Read</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>Mengapa banyak anak muda sekarang kesusahan mencari pekerjaan?</h2>
+                <div class="details">
+                    <span>13 Answers</span>
+                    <span>Last followed in 6 February</span>
+                    <div class="actions">
+                        <button class="btn">Mark as Read</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="question">
+                <h2>Apa saja saran untuk kami orang yang baru beli tanah?</h2>
+                <div class="details">
+                    <span>19 Answers</span>
+                    <span>Last followed in 16 February</span>
+                    <div class="actions">
+                        <button class="btn">Mark as Read</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="question">
+                <h2>Pernahkan kamu merasa canggung ngobrol sama orang tua?</h2>
+                <div class="details">
+                    <span>28 Answers</span>
+                    <span>Last followed in 31 March</span>
+                    <div class="actions">
+                        <button class="btn">Mark as Read</button>
+                    </div>
+                </div>
+            </div>
+
             <!-- Add more questions here -->
         </section>
     </main>
