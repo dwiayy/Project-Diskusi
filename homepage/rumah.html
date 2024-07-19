@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuoRun Q&A</title>
+    <title>QuoRun | Home</title>
 <style>
     body {
     font-family: Arial, sans-serif;
@@ -53,27 +53,51 @@ nav li {
 
 /* BLUE BAR=================================================================================== */
 
-main {
-    padding: 20px;
+/* Slider Animation */
+.slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
 
-#feed_bar {
-    flex-direction: column;
-    gap: 20px;
+.slider img{
+    width: 75%;
+    display: none;
+    margin: auto;
+
 }
 
-.question {
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    padding: 10px 15px;
     background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color:#3b5998;
+    border: none;
+    cursor: pointer;
 }
 
-.question h2 {
-    margin: 0;
-    font-size: 18px;
+.prev{
+    left: 0;
 }
 
+.next{
+    right: 0;
+}
+
+@keyframes fade{
+    from {opacity: .5}
+    to {opacity: 1;}
+}
 
 </style>
 
@@ -93,87 +117,71 @@ main {
         </nav>
     </header>
 
-
-
-    <main>
-        <div id="feed_bar">
-            <div id="feed">
-                <div style="background-color: white; padding: 6px; height: 400px;">
-                    <input id="ch" type="checkbox">
-                    <span style="font-weight: bold; color: #3b5998;">Your Answer</span>
-                    <img src="/FolderFoto/feed-image-1.png" style="height: 19rem; margin: 3px;"><br>
-                    <strong>Why are Japanese and Chinese students always at the top in all international scientific 
-                        competitions like Science Olympiad and ISEF?</strong><br><br>
-
-                    During the International Physics Olympiad 2015, we were taken to an amusement park. 
-                    It was a very hot day as I went to chill in a store where I noticed the Chinese physics team sitting there.
-
-                    I hesitantly (and, quite shyly) approached them to 
-                    initiate a conversation and maybe learn with which materials these top-scorers studied.
-                    <br> 
-                    During the conversation, I asked “so how did you guys do in the tests?”
-                    <br>
-                    While their answer was a simple “we did well” their smile indicated more than that: 
-                    “C’mon, do you really need to ask?!”
-                    <br>
-                    And, it’s true: asking them how they did was nothing but a formality. 
-                    As far as I remember, the team of China has won gold medals for several consecutive years.
-                    <br>
-                    The question that bugged my mind at the time was how? why? what do these guys do that we don’t?
-                    <br>
-                    During my conversation with the Chinese team, I learned three facts: 
-                    <br><br>
-                    1. THEY WORKED MORE THAN 10 HOURS EVERY DAY.
-                    <br><br>
-                    Each of the five members of the Chinese team said 
-                    that they worked more than ten hours each day for at least a year. 
-                    <br>
-                    Can you imagine that? 10 hours. Each day. More than a year. At least 4000 hours.
-                    <br>
-                    EVERY. SINGLE. ONE. OF. THEM.
-                    <div class="content"> <!-- Hide Content  --> 
-                    <br><br>
-                    2. THERE WERE AROUND 50 PEOPLE BEHIND THEM
-                    <br><br>
-                    The selective round in China is very fierce. 
-                    The guys I talked to told me that there were around 50 people having same level of skills as they had.
-                    <br>
-                    In other words, in China, you are not really special. 
-                    If you do not work hard, you do not go to the Olympiad. 
-                    All of these factors motivate you to hone your skills each and every single day.
-                    <br><br>
-                    3. THEIR TEACHERS CREATED SPECIALIZED PROBLEMS FOR THEM
-                    <br><br>
-
-                    The Chinese team is so strong in physics that they did not practice with “ordinary” problems like you and I know. 
-                    <br>
-                    Moreover, they thoroughly practiced for the practical (experimental) round of the physics Olympiad.
-                    <br>
-                    While there aren’t many experimental problems to solve which can help you hone your experimental skills for the Olympiad, 
-                    <br>
-                    Chinese teachers and professors were actively engaged in creating new problems for their team.
-                    <br>
-                    All three of these facts show how serious China prepares for its Olympiads. 
-                    <br>
-                    So is it genetics? While genetics might play a role, it is quite obvious that what makes China 
-                    <br> and Japan teams so powerful is the cultural mindset and hard-work they put in.
-                    <br>
-                    Are Japanese and Chinese students genetically at an advantage? We can never know without proper research. 
-                    <br>
-                    (And, in my personal opinion, genetic doesn’t play as significant role as hard-work and discipline.)
-                    <br>
-                    <label for="ch">Show Less</label>
-                    </div>
-                    
-                    <br><br>
-                    
-                    
-                    <label for="ch">Read More</label>
-                    
-                </div>
+    <div class="slider">
+        <div class="slides">
+            <div> <span></span>
+            <img class="slide" src="/FolderFoto/feed-image-3.png">
+            <img class="slide" src="/FolderFoto/feed-image-5.png">
+            <img class="slide" src="/FolderFoto/feed-image-1.png">
+            <img class="slide" src="/FolderFoto/feed-image-2.png">
             </div>
         </div>
-    </main>
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+    </div>
+
+
+    <script>
+        const slides = document.querySelectorAll(".slides img")
+        let slideIndex = 0;
+        let intervalId = null;
+
+
+        // initializeSlider();
+        document.addEventListener("DOMContentLoaded", initializeSlider);
+
+        function initializeSlider(){
+            if(slides.length > 0){
+                slides[slideIndex].classList.add("displaySlide");
+                intervalId = setInterval(nextSlide, 5000);
+            }
+        }
+        function showSlide(index){
+
+            if(index >= slides.length){
+                slideIndex = 0;
+
+            }
+
+            else if(index < 0){
+                slideIndex = slides.length -1;
+            }
+
+            slides.forEach(slide => {
+                slide.classList.remove("displaySlide");
+            });
+
+            slides[slideIndex].classList.add("displaySlide");
+        }
+        function prevSlide(){
+            clearInterval(intervalId);
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+        function nextSlide(){
+
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+
+
+
+
+
+
+    </script>
+        
 </body>
 </html>
 
