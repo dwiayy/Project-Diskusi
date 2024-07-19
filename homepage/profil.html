@@ -82,7 +82,7 @@ nav li {
 
 
 #question_pict{
-    width: 75px;
+    width: 60px;
     float: left;
     margin: 8px;
 }
@@ -91,6 +91,7 @@ nav li {
     clear: both;
     font-size: 12px;
     font-weight: bold;
+    padding: 3px;
 }
 
 textarea{
@@ -98,14 +99,82 @@ textarea{
     border: none;
     font-style: tahoma;
     font-size: 14px;
-
+    height: 60px;
+    resize: none;
 }
 
 #post_button:hover {
     float: left;
     background-color:  rgb(0, 139, 226);
+    border: none;
+    color: white;
+    padding: auto;
+    font-size: 14px;
+    border-radius: 2px;
 
 }
+
+#answer_bar{
+    margin-top: 20px;
+    background-color: white;
+    padding: 13px;
+    
+}
+
+#answer{
+    font-size: 13px;
+}
+/* ================================================== */
+input{
+    display: none;
+}
+
+#ch:checked ~ .content {
+    display: block;
+}
+
+#ch2:checked ~ .content2 {
+    display: block;
+}
+
+#ch3:checked ~ .content3{
+    display: block;
+}
+
+#ch:checked ~ label {
+    display: none;
+}
+
+#ch2:checked ~ label {
+    display: none;
+}
+
+#ch3:checked ~ label {
+    display: none;
+}
+
+label{
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    background-color: #3b5998;
+    padding: 3px 13px;
+    border-radius: 3px;
+    margin-top: 12px;
+}
+
+.content {
+    display: none;
+}
+
+.content2{
+    display: none;
+}
+
+.content3{
+    display: none;
+}
+
 </style>
 
 <body style="background-color: rgb(175, 172, 167); background-image: url(FolderFoto/bglogin.jpg);">
@@ -136,10 +205,9 @@ textarea{
             <br> 
             <div style="font-size: 30px;">Valencia Susanto</div>
             <br>
-            <div id="menu_button"><a style="padding: 10px; color: #405d9b ;" href="">Answers</a></div>
-            <div id="menu_button"><a style="padding: 10px; color: #405d9b ;" href="">Questions</a></div> 
-            <div id="menu_button"><a style="padding: 10px; color: #405d9b ;" href="">About</a></div> 
-            <div id="menu_button"><a style="padding: 10px; color: #405d9b ;" href="">Settings</a></div>
+            <div id="menu_button"><a style="padding: 19px; color: #405d9b ;" href="">Answers</a></div> 
+            <div id="menu_button"><a style="padding: 19px; color: #405d9b ;" href="">About</a></div> 
+            <div id="menu_button"><a style="padding: 19px; color: #405d9b ;" href="">Settings</a></div>
         </div>
 
         <!-- below cover area -->
@@ -153,43 +221,321 @@ textarea{
 
                     <div id="ques">
                         <br><img id="question_pict" src="/FolderFoto/shortcut-1.png" alt="">
-                        Coba dong share pengalaman kerja pertama kali?
+                        Can you share your first work experience?
                     </div>
 
                     <div id="ques">
-                        <br><img id="question_pict" src="/FolderFoto/shortcut-2.png" alt="">
-                        Gimana saran terbaik bagi mahasiswa semester awal seperti saya?
+                        <br><img id="question_pict" src="/FolderFoto/photo3.png" alt="">
+                        What are suggested things for a newbie student college like me?
                     </div>
 
                     <div id="ques">
                         <br><img id="question_pict" src="/FolderFoto/shortcut-3.png" alt="">
-                        Usaha apa yang legit tahun 1970 ini?
+                        What are legit businesses in this year?
                     </div>
 
                     <div id="ques">
                         <br><img id="question_pict" src="/FolderFoto/shortcut-4.png" alt="">
-                        Apakah masih worth beli ruko tahun 1970 ini?
+                        Is still worth to buy a "RUKO" in Indonesia recently?
+                    </div>
+
+                    <div id="ques">
+                        <br><img id="question_pict" src="/FolderFoto/shortcut-2.png" alt="">
+                        What car do you suggested for a prospective buyer?
+                    </div>
+
+                    <div id="ques">
+                        <br><img id="question_pict" src="/FolderFoto/member-8.png" alt="">
+                        Is still worth to go to the university?
+                    </div>
+
+                    <div id="ques">
+                        <br><img id="question_pict" src="/FolderFoto/shortcut-1.png" alt="">
+                        Where do you live recently? what is supposed to lived there?
+                    </div>
+
+                    <div id="ques">
+                        <br><img id="question_pict" src="/FolderFoto/photo4.png" alt="">
+                        Can you tell me how to install solar panel?
+                    </div>
+
+                    <div id="ques">
+                        <br><img id="question_pict" src="/FolderFoto/shortcut-2.png" alt="">
+                        How much cost do you spent in Jakarta last month?
+                    </div>
+
+                    <div id="ques">
+                        <br><img id="question_pict" src="/FolderFoto/member-8.png" alt="">
+                        Should Gen Z have to be a hard worker?
+                    </div>
+
+                    <div id="ques">
+                        <br><img id="question_pict" src="/FolderFoto/shortcut-1.png" alt="">
+                        What step by step to become a business man?
+                    </div>
+
+                    <div id="ques">
+                        <br><img id="question_pict" src="/FolderFoto/photo4.png" alt="">
+                        What is your opinion about Jakarta viral train recently?
                     </div>
 
                 </div>
 
             </div>
 
-            <!-- Answers area -->
-                <div style="min-height: 400px; flex: 2.5; padding: 20px; padding-right: 0px;">
-                    
 
-                    <div style="border: solid thin rgb(121, 118, 114); padding: 10px;">
+            <div style="min-height: 400px; flex: 2.5; padding: 20px; padding-right: 0px;">
+                    
+                <!-- textarea -->
+                    <div style="padding: 10px; background-color:#3b5998;">
                         <textarea placeholder="What's in your mind?"></textarea>
                         <input id="post_button" type="submit" value="Post"><br>
+                        <br>
                     </div>
+
+                <!-- answers area -->
+                    <div id="answer_bar">
+                        <div id="answer">
+                            <div id="card" style="background-color: white; border: 2px solid rgb(175, 172, 167); padding: 6px;">
+                                <input id="ch" type="checkbox">
+                                <span style="font-weight: bold; color: #3b5998;">Your Answer</span>
+                                <span style="float: right;">January 29, 2019</span>
+                                <img src="/FolderFoto/feed-image-1.png" style="height: 19rem; margin: 3px;"><br>
+                                <strong>Why are Japanese and Chinese students always at the top in all international scientific 
+                                    competitions like Science Olympiad and ISEF?</strong><br><br>
+
+                                During the International Physics Olympiad 2015, we were taken to an amusement park. 
+                                It was a very hot day as I went to chill in a store where I noticed the Chinese physics team sitting there.
+
+                                I hesitantly (and, quite shyly) approached them to 
+                                initiate a conversation and maybe learn with which materials these top-scorers studied.
+                                <br> 
+                                During the conversation, I asked “so how did you guys do in the tests?”
+                                <br>
+                                While their answer was a simple “we did well” their smile indicated more than that: 
+                                “C’mon, do you really need to ask?!”
+                                <br>
+                                And, it’s true: asking them how they did was nothing but a formality. 
+                                As far as I remember, the team of China has won gold medals for several consecutive years.
+                                <br>
+                                The question that bugged my mind at the time was how? why? what do these guys do that we don’t?
+                                <br>
+                                During my conversation with the Chinese team, I learned three facts: 
+                                <br><br>
+                                1. THEY WORKED MORE THAN 10 HOURS EVERY DAY.
+                                <br><br>
+                                Each of the five members of the Chinese team said 
+                                that they worked more than ten hours each day for at least a year. 
+                                <br>
+                                Can you imagine that? 10 hours. Each day. More than a year. At least 4000 hours.
+                                <br>
+                                EVERY. SINGLE. ONE. OF. THEM.
+                                <div class="content"> <!-- Hide Content  --> 
+                                <br><br>
+                                2. THERE WERE AROUND 50 PEOPLE BEHIND THEM
+                                <br><br>
+                                The selective round in China is very fierce. 
+                                The guys I talked to told me that there were around 50 people having same level of skills as they had.
+                                <br>
+                                In other words, in China, you are not really special. 
+                                If you do not work hard, you do not go to the Olympiad. 
+                                All of these factors motivate you to hone your skills each and every single day.
+                                <br><br>
+                                3. THEIR TEACHERS CREATED SPECIALIZED PROBLEMS FOR THEM
+                                <br><br>
+
+                                The Chinese team is so strong in physics that they did not practice with “ordinary” problems like you and I know. 
+                                <br>
+                                Moreover, they thoroughly practiced for the practical (experimental) round of the physics Olympiad.
+                                <br>
+                                While there aren’t many experimental problems to solve which can help you hone your experimental skills for the Olympiad, 
+                                <br>
+                                Chinese teachers and professors were actively engaged in creating new problems for their team.
+                                <br>
+                                All three of these facts show how serious China prepares for its Olympiads. 
+                                <br>
+                                So is it genetics? While genetics might play a role, it is quite obvious that what makes China 
+                                <br> and Japan teams so powerful is the cultural mindset and hard-work they put in.
+                                <br>
+                                Are Japanese and Chinese students genetically at an advantage? We can never know without proper research. 
+                                <br>
+                                (And, in my personal opinion, genetic doesn’t play as significant role as hard-work and discipline.)
+                                <br>
+                                <label for="ch">Show Less</label>
+                                </div>
+                                
+                                <br><br>
+                                <label for="ch">Read More</label>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="answer_bar">
+                        <div id="answer">
+                            <div id="card" style="background-color: white; border: 2px solid rgb(175, 172, 167); padding: 6px;">
+                                <input id="ch2" type="checkbox">
+                                <span style="font-weight: bold; color: #3b5998;">Your Answer</span>
+                                <span style="float: right;">March 24, 2003</span>
+                                <img src="/FolderFoto/feed-image-2.png" style="height: 19rem; margin: 3px;"><br>
+                                <strong>Why are Japanese and Chinese students always at the top in all international scientific 
+                                    competitions like Science Olympiad and ISEF?</strong><br><br>
+
+                                During the International Physics Olympiad 2015, we were taken to an amusement park. 
+                                It was a very hot day as I went to chill in a store where I noticed the Chinese physics team sitting there.
+
+                                I hesitantly (and, quite shyly) approached them to 
+                                initiate a conversation and maybe learn with which materials these top-scorers studied.
+                                <br> 
+                                During the conversation, I asked “so how did you guys do in the tests?”
+                                <br>
+                                While their answer was a simple “we did well” their smile indicated more than that: 
+                                “C’mon, do you really need to ask?!”
+                                <br>
+                                And, it’s true: asking them how they did was nothing but a formality. 
+                                As far as I remember, the team of China has won gold medals for several consecutive years.
+                                <br>
+                                The question that bugged my mind at the time was how? why? what do these guys do that we don’t?
+                                <br>
+                                During my conversation with the Chinese team, I learned three facts: 
+                                <br><br>
+                                1. THEY WORKED MORE THAN 10 HOURS EVERY DAY.
+                                <br><br>
+                                Each of the five members of the Chinese team said 
+                                that they worked more than ten hours each day for at least a year. 
+                                <br>
+                                Can you imagine that? 10 hours. Each day. More than a year. At least 4000 hours.
+                                <br>
+                                EVERY. SINGLE. ONE. OF. THEM.
+                                <div class="content2"> <!-- Hide Content  --> 
+                                <br><br>
+                                2. THERE WERE AROUND 50 PEOPLE BEHIND THEM
+                                <br><br>
+                                The selective round in China is very fierce. 
+                                The guys I talked to told me that there were around 50 people having same level of skills as they had.
+                                <br>
+                                In other words, in China, you are not really special. 
+                                If you do not work hard, you do not go to the Olympiad. 
+                                All of these factors motivate you to hone your skills each and every single day.
+                                <br><br>
+                                3. THEIR TEACHERS CREATED SPECIALIZED PROBLEMS FOR THEM
+                                <br><br>
+
+                                The Chinese team is so strong in physics that they did not practice with “ordinary” problems like you and I know. 
+                                <br>
+                                Moreover, they thoroughly practiced for the practical (experimental) round of the physics Olympiad.
+                                <br>
+                                While there aren’t many experimental problems to solve which can help you hone your experimental skills for the Olympiad, 
+                                <br>
+                                Chinese teachers and professors were actively engaged in creating new problems for their team.
+                                <br>
+                                All three of these facts show how serious China prepares for its Olympiads. 
+                                <br>
+                                So is it genetics? While genetics might play a role, it is quite obvious that what makes China 
+                                <br> and Japan teams so powerful is the cultural mindset and hard-work they put in.
+                                <br>
+                                Are Japanese and Chinese students genetically at an advantage? We can never know without proper research. 
+                                <br>
+                                (And, in my personal opinion, genetic doesn’t play as significant role as hard-work and discipline.)
+                                <br>
+                                <label for="ch2">Show Less</label>
+                                </div>
+                                
+                                <br><br>
+                                
+                                
+                                <label for="ch2">Read More</label>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div id="answer_bar">
+                        <div id="answer">
+                            <div id="card" style="background-color: white; border: 2px solid rgb(175, 172, 167); padding: 6px;">
+                                <input id="ch3" type="checkbox">
+                                <span style="font-weight: bold; color: #3b5998;">Your Answer</span>
+                                <span style="float: right;">May 26, 1990</span>
+                                <img src="/FolderFoto/feed-image-3.png" style="height: 19rem; margin: 3px;"><br>
+                                <strong>Why are Japanese and Chinese students always at the top in all international scientific 
+                                    competitions like Science Olympiad and ISEF?</strong><br><br>
+
+                                During the International Physics Olympiad 2015, we were taken to an amusement park. 
+                                It was a very hot day as I went to chill in a store where I noticed the Chinese physics team sitting there.
+
+                                I hesitantly (and, quite shyly) approached them to 
+                                initiate a conversation and maybe learn with which materials these top-scorers studied.
+                                <br> 
+                                During the conversation, I asked “so how did you guys do in the tests?”
+                                <br>
+                                While their answer was a simple “we did well” their smile indicated more than that: 
+                                “C’mon, do you really need to ask?!”
+                                <br>
+                                And, it’s true: asking them how they did was nothing but a formality. 
+                                As far as I remember, the team of China has won gold medals for several consecutive years.
+                                <br>
+                                The question that bugged my mind at the time was how? why? what do these guys do that we don’t?
+                                <br>
+                                During my conversation with the Chinese team, I learned three facts: 
+                                <br><br>
+                                1. THEY WORKED MORE THAN 10 HOURS EVERY DAY.
+                                <br><br>
+                                Each of the five members of the Chinese team said 
+                                that they worked more than ten hours each day for at least a year. 
+                                <br>
+                                Can you imagine that? 10 hours. Each day. More than a year. At least 4000 hours.
+                                <br>
+                                EVERY. SINGLE. ONE. OF. THEM.
+                                <div class="content3"> <!-- Hide Content  --> 
+                                <br><br>
+                                2. THERE WERE AROUND 50 PEOPLE BEHIND THEM
+                                <br><br>
+                                The selective round in China is very fierce. 
+                                The guys I talked to told me that there were around 50 people having same level of skills as they had.
+                                <br>
+                                In other words, in China, you are not really special. 
+                                If you do not work hard, you do not go to the Olympiad. 
+                                All of these factors motivate you to hone your skills each and every single day.
+                                <br><br>
+                                3. THEIR TEACHERS CREATED SPECIALIZED PROBLEMS FOR THEM
+                                <br><br>
+
+                                The Chinese team is so strong in physics that they did not practice with “ordinary” problems like you and I know. 
+                                <br>
+                                Moreover, they thoroughly practiced for the practical (experimental) round of the physics Olympiad.
+                                <br>
+                                While there aren’t many experimental problems to solve which can help you hone your experimental skills for the Olympiad, 
+                                <br>
+                                Chinese teachers and professors were actively engaged in creating new problems for their team.
+                                <br>
+                                All three of these facts show how serious China prepares for its Olympiads. 
+                                <br>
+                                So is it genetics? While genetics might play a role, it is quite obvious that what makes China 
+                                <br> and Japan teams so powerful is the cultural mindset and hard-work they put in.
+                                <br>
+                                Are Japanese and Chinese students genetically at an advantage? We can never know without proper research. 
+                                <br>
+                                (And, in my personal opinion, genetic doesn’t play as significant role as hard-work and discipline.)
+                                <br>
+                                <label for="ch3">Show Less</label>
+                                </div>
+                                
+                                <br><br>
+                                
+                                
+                                <label for="ch3">Read More</label>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
                     
-                </div>
+
         </div>
-
-
     </div>
-
 
 
 </body>
