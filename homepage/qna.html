@@ -30,11 +30,39 @@ nav ul {
     padding: 0;
 }
 
+/* <<<<<<< HEAD */
 #search_box {
-    width: 400px;
-    height: 20px;
     border-radius: 10px;
 }
+/* ======= */
+.search-container {
+        display: flex;
+    }
+.search-container input[type="text"] {
+        flex: 1;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+.search-container button {
+        background-color: #007bff;
+        color: white;
+        border: 1px solid #007bff;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        font-size: 14px;
+        outline: none;
+    }
+.search-container button:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+.highlight {
+        background-color: rgb(221, 248, 69);
+        font-weight: bold;
+    }
+/* >>>>>>>  */
 
 nav li {
     font-family: 'Times New Roman', Times, serif;
@@ -57,16 +85,47 @@ nav li {
         <h1 style="cursor: pointer;">Quo-Run</h1>
         <nav>
             <ul style="padding-right: 1em;">
-                <li><input type="text" id="search_box" placeholder="Looking for something?"></li>
-                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em; text-decoration: none;" href="rumah.html">Home</a></li>
-                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em; text-decoration: none;" href="notification.html">Notification</a></li>
-                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em; text-decoration: none;" href="qna.html">Q&A</a></li>
-                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em; text-decoration: none;" href="group.html">Group</a></li>
+<!-- <<<<<<< HEAD -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Looking for something?">
+                    <button onclick="search()">Search</button>
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="rumah.html">Home</a></li>
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="notification.html">Notification</a></li>
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="qna.html">Q&A</a></li>
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="group.html">Group</a></li>
+
                 <a href="profil.html"><img src="/FolderFoto/member-6.png" style="width: 40px; float: right; border-radius: 50%; padding: 4px;"></a>
             </ul>
         </nav>
     </header>
 
-
+    <script>
+        function search() {
+            var searchText = document.getElementById('searchInput').value.trim().toLowerCase();
+            var content = document.body; // Ganti dengan elemen tempat konten Anda
+            
+            // Remove previous highlights
+            var highlighted = content.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
+            content.innerHTML = highlighted;
+        
+            if (searchText === '') {
+                return;
+            }
+        
+            var regex = new RegExp('(' + searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+            var matches = content.innerHTML.match(regex);
+        
+            if (matches) {
+                var matchIndex = content.innerHTML.indexOf(matches[0]);
+                content.innerHTML = content.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+        
+                // Scroll to the first match
+                var highlightedElement = document.querySelector('.highlight');
+                highlightedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                alert('Tidak ada hasil yang ditemukan');
+            }
+        }
+        </script>
 </body>
 </html>
