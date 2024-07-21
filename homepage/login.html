@@ -53,6 +53,54 @@
             color: white;
         }
 
+        .popup{
+            width: 400px;
+            background: rgb(59, 89, 152);
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #fff;
+            visibility: hidden;
+            transition: transform 0.4s, top 0.4s;
+        }
+
+        .open-popup{
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%,-50%) scale(1);
+        }
+
+        .popup img{
+            width: 2em;
+            margin-top: 1em;
+        }
+
+        .popup h2{
+            font-size: 38px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+        }
+
+        .popup button{
+            width: 50%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background-color: #fff;
+            color: rgb(59, 89, 152);
+            border: 0;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+
 
     </style>
 </head>
@@ -68,10 +116,29 @@
 
         <input type="text" id="text" placeholder="Email"><br><br>
         <input type="password" id="text" placeholder="Password"><br><br>
-        <a href="rumah.html"><input style="cursor: pointer;" type="submit" id="button" value="Sign in"></a>
+        <input style="cursor: pointer;" type="submit" onclick="openPopup()" id="button" value="Sign in">
+        <div class="popup" id="popup">
+            <img src="/FolderFoto/like.png">
+            <p>Password is Correct</p>
+            <a href="rumah.html"><button type="button" onclick="closePopup()">OK!</button></a>
+        </div>
         <br><br><br><br>
     </div>
 
+
+
+
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup")
+        }
+
+    </script>
 
 
 </body>

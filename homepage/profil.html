@@ -17,6 +17,7 @@ header {
     background-color: #3b5998;
     padding: 10px 20px;
     color: white;
+    border-radius: 10px;
 }
 
 header h1 {
@@ -39,6 +40,7 @@ nav ul {
 #search_box {
     width: 400px;
     height: 20px;
+    border-radius: 10px;
 }
 
 nav li {
@@ -50,6 +52,7 @@ nav li {
 #search_box {
     width: 400px;
     height: 20px;
+    border-radius: 10px;
 }
 
 #blue_bar_btn:hover{
@@ -78,6 +81,7 @@ nav li {
     margin-top: 20px;
     color: white;
     padding: 8px;
+    border-radius: 10px;
 }
 
 
@@ -92,6 +96,7 @@ nav li {
     font-size: 12px;
     font-weight: bold;
     padding: 3px;
+    cursor: pointer;
 }
 
 textarea{
@@ -101,31 +106,30 @@ textarea{
     font-size: 14px;
     height: 60px;
     resize: none;
+    border-radius: 10px;
 }
 
-#post_button:hover {
+#post_button{
     float: left;
-    background-color:  rgb(0, 139, 226);
-    border: none;
-    color: white;
+    background-color:  rgb(5, 235, 139);
     padding: auto;
     font-size: 14px;
     border-radius: 2px;
-
+    cursor: pointer;
 }
 
 #answer_bar{
     margin-top: 20px;
     background-color: white;
     padding: 13px;
-    
+    border-radius: 10px;
 }
 
 #answer{
     font-size: 13px;
 }
 /* ================================================== */
-input{
+#card input{
     display: none;
 }
 
@@ -140,6 +144,7 @@ input{
 #ch3:checked ~ .content3{
     display: block;
 }
+
 
 #ch:checked ~ label {
     display: none;
@@ -198,16 +203,16 @@ label{
     <!-- cover area -->
     <div style="width: 800px; margin: auto; min-height: 400px;">
 
-        <div style="background-color: white; text-align: center; color: #405d9b">
+        <div style="background-color: white; text-align: center; border-radius: 10px; color: #405d9b">
 
             <img src="/FolderFoto/feed-image-5.png" style="width:100%; "  >
             <img id="profile_pic" src="/FolderFoto/member-6.png">
             <br> 
-            <div style="font-size: 30px;">Valencia Susanto</div>
+            <div style="font-size: 30px; cursor: pointer;">Valencia Susanto</div>
             <br>
-            <div id="menu_button"><a style="padding: 19px; color: #405d9b ;" href="">Answers</a></div> 
-            <div id="menu_button"><a style="padding: 19px; color: #405d9b ;" href="">About</a></div> 
-            <div id="menu_button"><a style="padding: 19px; color: #405d9b ;" href="">Settings</a></div>
+            <div id="menu_button"><a style="padding: 19px; color: #405d9b ; text-decoration: none;" href="">Wanna Answer</a></div> 
+            <div id="menu_button"><a style="padding: 19px; color: #405d9b ; text-decoration: none;" href="">Wanna Ask</a></div> 
+            <div id="menu_button"><a style="padding: 19px; color: #405d9b ; text-decoration: none;" href="">Settings</a></div>
         </div>
 
         <!-- below cover area -->
@@ -287,7 +292,7 @@ label{
             <div style="min-height: 400px; flex: 2.5; padding: 20px; padding-right: 0px;">
                     
                 <!-- textarea -->
-                    <div style="padding: 10px; background-color:#3b5998;">
+                    <div style="padding: 10px; background-color:#3b5998; border-radius: 10px;">
                         <textarea placeholder="What's in your mind?"></textarea>
                         <input id="post_button" type="submit" value="Post"><br>
                         <br>
@@ -300,8 +305,8 @@ label{
                                 <input id="ch" type="checkbox">
                                 <span style="font-weight: bold; color: #3b5998;">Your Answer</span>
                                 <span style="float: right;">January 29, 2019</span>
-                                <img src="/FolderFoto/feed-image-1.png" style="height: 19rem; margin: 3px;"><br>
-                                <strong>Why are Japanese and Chinese students always at the top in all international scientific 
+                                <img src="/FolderFoto/feed-image-19.jpg" style="height: 19rem; margin-left: 4.5em;"><br>
+                                <strong style="cursor: pointer;">Why are Japanese and Chinese students always at the top in all international scientific 
                                     competitions like Science Olympiad and ISEF?</strong><br><br>
 
                                 During the International Physics Olympiad 2015, we were taken to an amusement park. 
@@ -378,7 +383,7 @@ label{
                                 <span style="font-weight: bold; color: #3b5998;">Your Answer</span>
                                 <span style="float: right;">March 24, 2003</span>
                                 <img src="/FolderFoto/feed-image-2.png" style="height: 19rem; margin: 3px;"><br>
-                                <strong>Why are Japanese and Chinese students always at the top in all international scientific 
+                                <strong style="cursor: pointer;">Why are Japanese and Chinese students always at the top in all international scientific 
                                     competitions like Science Olympiad and ISEF?</strong><br><br>
 
                                 During the International Physics Olympiad 2015, we were taken to an amusement park. 
@@ -459,7 +464,7 @@ label{
                                 <span style="font-weight: bold; color: #3b5998;">Your Answer</span>
                                 <span style="float: right;">May 26, 1990</span>
                                 <img src="/FolderFoto/feed-image-3.png" style="height: 19rem; margin: 3px;"><br>
-                                <strong>Why are Japanese and Chinese students always at the top in all international scientific 
+                                <strong style="cursor: pointer;">Why are Japanese and Chinese students always at the top in all international scientific 
                                     competitions like Science Olympiad and ISEF?</strong><br><br>
 
                                 During the International Physics Olympiad 2015, we were taken to an amusement park. 
