@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuoRun Q&A</title>
+    <title>QuoRun | Home</title>
 <style>
     body {
     font-family: Arial, sans-serif;
@@ -80,25 +80,113 @@ nav li {
 
 /* BLUE BAR=================================================================================== */
 
-main {
-    padding: 20px;
+/* Slider Animation */
+.slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
 
-#feed_bar {
-    flex-direction: column;
-    gap: 20px;
+.slider img{
+    width: 75%;
+    display: none;
+    margin: auto;
+    border-radius: 1.5em;
+    margin-top: 0.5em;
 }
 
-.question {
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    padding: 10px 15px;
     background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color:#3b5998;
+    border: none;
+    cursor: pointer;
 }
 
-.question h2 {
-    margin: 0;
-    font-size: 18px;
+.prev{
+    left: 0;
+}
+
+.next{
+    right: 0;
+}
+
+@keyframes fade{
+    from {opacity: .5}
+    to {opacity: 1;}
+}
+
+.write-post-container{
+    width: 65%;
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
+    columns: #626262;
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 1em;
+}
+
+.user-profile p{
+    margin-bottom: -5px;
+    font-weight: 500;
+    color: #3b5998;
+    padding-bottom: 5px;
+}
+
+.user-profile small{
+    font-size: 12px;
+}
+
+.post-input-container{
+    padding-left: 55px;
+    padding-top: 20px;
+}
+
+.post-input-container textarea{
+    width: 65%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    resize: none;
+}
+
+.post-container{
+    width: 65%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    margin: auto;
+}
+
+.user-profile span{
+    font-size: 13px;
+    color: #9a9a9a;
 }
 
 
@@ -107,6 +195,7 @@ main {
 </head>
 <body style="background-color: rgb(175, 172, 167); background-image: url(FolderFoto/bglogin.jpg);">
     <header>
+<<<<<<< HEAD
         <h1>Quo-Run</h1>
         </div>        
         <nav>
@@ -118,11 +207,22 @@ main {
                 <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="notification.html">Notification</a></li>
                 <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="qna.html">Q&A</a></li>
                 <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em;" href="group.html">Group</a></li>
+=======
+        <h1 style="cursor: pointer;">Quo-Run</h1>
+        <nav>
+            <ul style="padding-right: 1em;">
+                <li><input type="text" id="search_box" placeholder="Looking for something?"></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em; text-decoration: none;" href="rumah.html">Home</a></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em; text-decoration: none;" href="notification.html">Notification</a></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em; text-decoration: none;" href="qna.html">Q&A</a></li>
+                <li id="blue_bar_btn"><a style="color: white; font-weight: bold; font-size: 1em; text-decoration: none;" href="group.html">Group</a></li>
+>>>>>>> 79862fad2bdd57a782555a5310e21ae813410be1
                 <a href="profil.html"><img src="/FolderFoto/member-6.png" style="width: 40px; float: right; border-radius: 50%; padding: 4px;"></a>
             </ul>
         </nav>
     </header>
 
+<<<<<<< HEAD
 
     <main>
         <div id="feed_bar">
@@ -231,6 +331,134 @@ main {
             }
         }
         </script>
+=======
+    <div class="slider">
+        <div class="slides">
+            <div> <span></span>
+            <img class="slide" src="/FolderFoto/feed-image-3.png">
+            <img class="slide" src="/FolderFoto/feed-image-5.png">
+            <img class="slide" src="/FolderFoto/feed-image-1.png">
+            <img class="slide" src="/FolderFoto/feed-image-2.png">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+    </div>
+
+
+    <div class="write-post-container">
+        <div class="user-profile">
+            <img src="/FolderFoto/member-6.png" alt="">
+            <div>
+                <p>Valencia Susanto</p>
+                <small>Public <i class="fa-solid fa-caret-down"></i></small>
+            </div>
+        </div>
+        <div class="post-input-container">
+            <textarea rows="3" placeholder="what's your mind?"></textarea>
+        </div>
+    </div>
+
+    <div class="post-container">
+        <div class="user-profile">
+            <img src="/FolderFoto/member-6.png" alt="">
+            <div>
+                <p>Valencia Susanto</p>
+                <span>June 24 1980, 13:34 AM</span>
+            </div>
+        </div>
+        <p style="color: #333; margin: 15px 0; font-size: 15px;">
+            Kukatakan dengan Indah dengan terbuka hatiku hampa sepertinya luka menghampirinya</p>
+    </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const slides = document.querySelectorAll(".slides img")
+        let slideIndex = 0;
+        let intervalId = null;
+
+
+        // initializeSlider();
+        document.addEventListener("DOMContentLoaded", initializeSlider);
+
+        function initializeSlider(){
+            if(slides.length > 0){
+                slides[slideIndex].classList.add("displaySlide");
+                intervalId = setInterval(nextSlide, 5000);
+            }
+        }
+        function showSlide(index){
+
+            if(index >= slides.length){
+                slideIndex = 0;
+
+            }
+
+            else if(index < 0){
+                slideIndex = slides.length -1;
+            }
+
+            slides.forEach(slide => {
+                slide.classList.remove("displaySlide");
+            });
+
+            slides[slideIndex].classList.add("displaySlide");
+        }
+        function prevSlide(){
+            clearInterval(intervalId);
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+        function nextSlide(){
+
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+
+
+
+
+
+
+    </script>
+        
+>>>>>>> 79862fad2bdd57a782555a5310e21ae813410be1
 </body>
 </html>
 
