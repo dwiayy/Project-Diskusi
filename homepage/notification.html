@@ -104,6 +104,7 @@ main {
 .question h2 {
     margin: 0;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .details {
@@ -130,10 +131,12 @@ main {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    
 }
 
 .actions .btn:hover {
     background-color: #2d4373;
+    
 }
 
 </style>
@@ -161,7 +164,7 @@ main {
     <main>
         <section class="questions">
             <div class="question">
-                <h2>Do you prefer in crowd or silence?</h2>
+                <a style="text-decoration: none;" href="notif1.html"><h2>Why is it so difficult to find a job in Singapore especially if one is not a PR or citizen?</h2></a>
                 <div class="details">
                     <span>54 Answers</span>
                     <span>Last followed in yesterday</span>
@@ -171,7 +174,7 @@ main {
                 </div>
             </div>
             <div class="question">
-                <h2>Is flexing important? what are the advantages?</h2>
+                <a style="text-decoration: none;" href="notif2.html"><h2>Is flexing important? what are the advantages?</h2></a>
                 <div class="details">
                     <span>15 Answers</span>
                     <span>Last followed in 29 June</span>
@@ -182,7 +185,7 @@ main {
             </div>
 
             <div class="question">
-                <h2>What are simple attitudes that liked by others?</h2>
+                <a style="text-decoration: none;" href="notif4.html"><h2>What are simple attitudes that liked by others?</h2></a>
                 <div class="details">
                     <span>11 Answers</span>
                     <span>Last followed in 13 June</span>
@@ -193,7 +196,7 @@ main {
             </div>
 
             <div class="question">
-                <h2>Why we should become a good person?</h2>
+                <a style="text-decoration: none;" href="notif5.html"><h2>Why we should become a good person?</h2></a>
                 <div class="details">
                     <span>120 Answers</span>
                     <span>Last followed in 3 January</span>
@@ -202,6 +205,19 @@ main {
                     </div>
                 </div>
             </div>
+
+
+            <div class="question">
+                <a style="text-decoration: none;" href="notif6.html"><h2>Has anyone regretted getting married immediately after the ceremony?</h2></a>
+                <div class="details">
+                    <span>209 Answers</span>
+                    <span>Last followed in 24 March</span>
+                    <div class="actions">
+                        <button class="btn">Mark as Read</button>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="question">
                 <h2>What are important things for a 40 y.o?</h2>
@@ -215,7 +231,7 @@ main {
             </div>
 
             <div class="question">
-                <h2>Why lot of teenagers have difficulty finding a job?</h2>
+                <a style="text-decoration: none;" href="notif3.html"><h2>Why lot of teenagers have difficulty finding a job?</h2></a>
                 <div class="details">
                     <span>13 Answers</span>
                     <span>Last followed in 6 February</span>
@@ -276,7 +292,7 @@ main {
                 var highlightedElement = document.querySelector('.highlight');
                 highlightedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } else {
-                alert('Tidak ada hasil yang ditemukan');
+                alert('Not Found');
             }
         }
         </script>

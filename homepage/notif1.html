@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(175, 172, 167);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* BLUE BAR===================================================================================*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b5998;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.5em;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.user-profile p{
+    margin-top: none;
+    margin-bottom: -5px;
+    font-weight: 500;
+    color: #3b5998;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.user-profile small{
+    font-size: 12px;
+}
+
+.post-container{
+    width: 65%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.user-profile span{
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.post-img{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+.post-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity-icons div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.activity-icons div img{
+    width: 18px;
+    margin-right: 10px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+/* ================================================== */
+
+
+/* <<<<<<< HEAD */
+#search_box {
+    border-radius: 10px;
+}
+/* ======= */
+.search-container {
+        display: flex;
+    }
+.search-container input[type="text"] {
+        flex: 1;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+.search-container button {
+        background-color: #007bff;
+        color: white;
+        border: 1px solid #007bff;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        font-size: 14px;
+        outline: none;
+    }
+.search-container button:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+.highlight {
+        background-color: rgb(221, 248, 69);
+        font-weight: bold;
+    }
+/* //////// */
+.card2{
+    background-color: #fff;
+    border-radius: 10px;
+    line-height: 1,8;
+}
+
+#chbox2 {
+    display: none;
+}
+
+#chbox2:checked ~ .hide-content2{
+    display: block;
+}
+
+#chbox2:checked ~ label{
+    display: none;
+}
+
+.hide-content2{
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3b5998;
+    padding: 3px 13px;
+    border-radius: 3px;
+    margin-top: 12px;
+}
+
+
+
+
+
+/* >>>>>>>  */
+
+nav li {
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto 20px;
+    cursor: pointer;
+}
+
+#blue_bar_btn:hover{
+    background-color: black;
+}
+    </style>
+</head>
+<body style="background-color: rgb(175, 172, 167); background-image: url(FolderFoto/bglogin.jpg);">
+    <header>
+        <h1 style="cursor: pointer;">Quo-Run</h1>
+        <nav>
+            <ul style="padding-right: 1em;">
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Looking for something?">
+                    <button onclick="search()">Search</button>
+                </div>  
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="rumah.html">Home</a></li>
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="notification.html">Notification</a></li>
+
+                <a href="profil.html"><img src="/FolderFoto/member-6.png" style="width: 40px; float: right; border-radius: 50%; padding: 4px;"></a>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="post-container">
+
+        <div class="user-profile">
+            <img src="/FolderFoto/member-1.png" alt="">
+            <div class="uploader">
+                <p>Annelies Mellema</p>
+                <span>August 17 1945, 10:34 AM</span>
+            </div>
+        </div>
+            <img src="/FolderFoto/feed-image-15.jpg" class="post-img"><br><br>
+
+            <div class="card2">
+                <input id="chbox2" type="checkbox">
+            <strong style="cursor: pointer;">Why is it so difficult to find a job in Singapore especially if one is not a PR or citizen?</strong>
+            <br><br>
+                Okay, so what Finn Koh said is essentially correct from a legal standpoint. 
+                However it completely overlooks some real-life practical implications that makes the job search daunting for a foreigner in Singapore. 
+                One thing is what the government says on paper, another thing is what happens behind the scenes. Now let’s get into it :
+            <br><br>            
+                1.	Employment Pass (the type of work permit used mostly by white collars earning above 3.6k SGD) yes it has no quota. 
+                IN THEORY. However, once you look in practice, year after year, the number of EPs working in Singapore has been steady. 
+                These are the numbers for the past five years: 178,900 187,900 192,300 187,700 185,800 193,700. 
+                Once you see this it becomes pretty clear that it cannot be a coincidence, that essentially for each EP leaving there is one being granted in essence. 
+                The quota is not there formally but strangely the numbers remain steady. 
+                Whether this is regulated via the government conveniently not approving visas when demands are too high or by pressuring the companies in other ways, does not matter much. 
+                Thing is, there is a cap, it shows in the numbers, this is not simply limited demand. Companies knows it.
+            <br><br>
+            <div class="hide-content2">
+                2.	Another secret to those in the know is that for EP the 3.6k quota is just another formal number with little real-life applicability. 
+                Earning 4k might get you an EP if you’re from Hong Kong, China or in general one nationality that is liked because it contributes to the Chinese portion of the population. 
+                If you come from USA or Europe for example expect your application to be rejected below anything like 6–7K.
+            <br><br>
+                3.	While EPs are theoretically not capped, there is a more subtle way in which the government manages to regulate the number of foreigners entering the companies. 
+                They do it via the so-called TAPEF (Tripartite Alliance for Fair & Progressive Employment Practices). 
+                Essentially this entity at the intersection of different parties, that know nothing about the specifics of your industry nor bother understanding your manpower needs, 
+                will simply come down on you and ‘blacklist you’ or give you a warning for practicing “discriminatory practices against the locals”, as soon as you hire more foreigners than they would like. 
+                So much for the EP quota being uncapped right? Now it is of little help to explain why the talent pool for the particular roles you’re searching is not available in Singapore 
+                or why you found more qualified candidates elsewhere. They simply won’t listen until you re-balance the ratio by hiring more locals or getting rid of foreigners, so they can pull you out of the blacklist. 
+                Essentially via this mechanism they can block any further EP application for your company. 
+                So now you know why most companies, regardless of EP being formally uncapped, will be very careful with hiring foreigners, to avoid being watched closely and potentially having their applications frozen.
+            <br><br>   
+                4.	What was said so far should have already convinced you that the playing field is not as even as it seems. 
+                But further to that, regardless of the government regulations, what matters is the local culture of the companies. 
+                If it’s a locally dominated culture, and that’s the case often even with American MNCs that open here and commit to hiring tons of locals (in exchange of course for favourable tax agreements). 
+                Once the management and culture is locally dominated, it becomes not very uncommon to see job ads that say “in order to maintain a local culture / core / whatever / the job is available only to singaporeans …etc”. 
+                Or even when they don’t say it in the ad, they understand internally that the position is exclusively for locals and other CVs will be rejected by default.
+            <br><br>
+                5.	So in essence, to get a job in Singapore you’d better be 1. from an another Asian nationality of their liking and possibly speak a language that can help cover 
+                another asian market (Singapore is a hub for asia pacific), 2. with a very specific background they can’t find locally. 
+                Example AI expert, then you can find easily but remember they want foreigners to “absorb the know how” so be ready to be sent home 
+                when this is no longer necessary as that’s the long term gain. But if your skill is extremely relevant, you’ll always have a way in. 3. Alternatively you have to find ideally a company where the management is foreigner, 
+                and is open to hiring foreigners. I would say out of 10 job ads you see, probably 9 you’re out by default as foreigner and 1 you can actually compete for.
+            <br><br>            
+                6.	Having said all this, if you can land a job in Singapore, it’s really a blessing. 
+                Low income tax, safe place, can travel everywhere, super efficient and organised etc. 
+                So definitely worth all the struggle. But we have to be honest in saying it can truly be an uphill battle and more so with every year. 
+                It’s not what it used to be 5, 10 or 15 years ago when people could land a PR like buying a coffee at Starbucks. 
+                These days even renewing one’s own PR has become a struggle and getting a new one… don’t get me started. 
+                You just gotta be prepared that the place isn’t foreign friendly and not an even playing field, despite the official information. 
+                But persevering at working and moving here, can be a worthwhile effort too.
+            <br><br>
+            <label for="chbox2">Show Less</label>
+            </div>
+                
+            <label for="chbox2">Read More</label>
+            </div>  
+
+            <br><br>
+            <div class="post-row">
+                <div class="activity-icons">
+                    <div><img src="/FolderFoto/like.png"> 102k</div>
+                    <div><img src="/FolderFoto/comments.png"> 450k</div>
+                    <div><img src="/FolderFoto/share.png"> 20k</div>
+                </div>
+            </div>
+        </div>             
+
+
+
+        <script>
+            function search() {
+                var searchText = document.getElementById('searchInput').value.trim().toLowerCase();
+                var content = document.body; // Ganti dengan elemen tempat konten Anda
+                
+                // Remove previous highlights
+                var highlighted = content.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
+                content.innerHTML = highlighted;
+            
+                if (searchText === '') {
+                    return;
+                }
+            
+                var regex = new RegExp('(' + searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+                var matches = content.innerHTML.match(regex);
+            
+                if (matches) {
+                    var matchIndex = content.innerHTML.indexOf(matches[0]);
+                    content.innerHTML = content.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+            
+                    // Scroll to the first match
+                    var highlightedElement = document.querySelector('.highlight');
+                    highlightedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    alert('Not Found');
+                }
+            }
+            </script>
+
+</body>
+</html>

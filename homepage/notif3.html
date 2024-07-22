@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(175, 172, 167);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* BLUE BAR===================================================================================*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b5998;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.5em;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.user-profile p{
+    margin-top: none;
+    margin-bottom: -5px;
+    font-weight: 500;
+    color: #3b5998;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.user-profile small{
+    font-size: 12px;
+}
+
+.post-container{
+    width: 65%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.user-profile span{
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.post-img{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+.post-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity-icons div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.activity-icons div img{
+    width: 18px;
+    margin-right: 10px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+/* ================================================== */
+
+
+/* <<<<<<< HEAD */
+#search_box {
+    border-radius: 10px;
+}
+/* ======= */
+.search-container {
+        display: flex;
+    }
+.search-container input[type="text"] {
+        flex: 1;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+.search-container button {
+        background-color: #007bff;
+        color: white;
+        border: 1px solid #007bff;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        font-size: 14px;
+        outline: none;
+    }
+.search-container button:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+.highlight {
+        background-color: rgb(221, 248, 69);
+        font-weight: bold;
+    }
+/* //////// */
+
+.card2{
+    background-color: #fff;
+    border-radius: 10px;
+    line-height: 1,8;
+}
+
+#chbox2 {
+    display: none;
+}
+
+#chbox2:checked ~ .hide-content2{
+    display: block;
+}
+
+#chbox2:checked ~ label{
+    display: none;
+}
+
+.hide-content2{
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3b5998;
+    padding: 3px 13px;
+    border-radius: 3px;
+    margin-top: 12px;
+}
+
+
+
+
+/* >>>>>>>  */
+
+nav li {
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto 20px;
+    cursor: pointer;
+}
+
+#blue_bar_btn:hover{
+    background-color: black;
+}
+    </style>
+</head>
+<body style="background-color: rgb(175, 172, 167); background-image: url(FolderFoto/bglogin.jpg);">
+    <header>
+        <h1 style="cursor: pointer;">Quo-Run</h1>
+        <nav>
+            <ul style="padding-right: 1em;">
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Looking for something?">
+                    <button onclick="search()">Search</button>
+                </div>  
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="rumah.html">Home</a></li>
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="notification.html">Notification</a></li>
+
+                <a href="profil.html"><img src="/FolderFoto/member-6.png" style="width: 40px; float: right; border-radius: 50%; padding: 4px;"></a>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="post-container">
+
+        <div class="user-profile">
+            <img src="/FolderFoto/member-8.png" alt="">
+            <div class="uploader">
+                <p>Agus Prajak</p>
+                <span>April 19 2019, 10:30 AM</span>
+            </div>
+        </div>
+            <img src="/FolderFoto/feed-image-1.png" class="post-img"><br><br>
+
+            <div class="card2">
+                <input id="chbox2" type="checkbox">
+            <strong style="cursor: pointer;">Why lot of teenagers have difficulty finding a job?</strong>
+            <br><br>
+            Actually, getting a job is difficult for most people. Why? Because for some odd reason, 
+            nobody has yet developed a true marketplace for jobs and talent.
+            <br><br>
+            Put another way, if any other market were as 
+            inefficient as the so-called "job market," we wouldn't call them markets in the first place.
+            <br><br>
+            But let's bullet-list a few quick specific issues and keep this brief. In no particular order:
+            <br><br>
+            1. Résumé spam: Job seekers apply to every job they can find even if they are not a genuinely 
+            good match for that position. Employers know this, and so they do everything they can to filter out all the "résumé spam." Genuinely qualified candidates are more likely to get overlooked as a result.
+            <br><br>
+            <div class="hide-content2">
+            2. Too expensive to post most jobs: It's true that there aren't enough jobs to go around, but not 
+            for the reasons you think. It turns out that most companies can't afford to post most of their jobs! 
+            Surprised? You shouldn't be: standard job posting costs range from $75 - $500 per job posting, per zip code 
+            / region, per 30 day period. LinkedIn starts at a ridiculous $295. Subscription fees can cost many thousands 
+            of dollars for big corporations. So what becomes a major expense for a large company is a virtually disabling 
+            expense for smaller companies and startups.
+            <br><br>
+            3. Expensive pre-paid solutions with no guarantee of actual success: for job seekers willing to actually take 
+            a more premium approach, most of the existing options require expensive pre-paid job seeker plans for which you 
+            must pay even if you don't get anything out of it. Put another way, there is no "pay only if you win something" 
+            solution out there. (Actually, there is now, but I'm trying not to do a blatant plug... yet. :) LinkedIn, 
+            for example, asks job seekers to pay a staggering $30 or $50 per month just to be able to send 5 or 10 InMail 
+            (unsolicited) messages, respectively, and 15 or 25 "introductions," respectively. First, InMail messages really 
+            don't work -- everyone seems to know this now, and second, you're still at the mercy of someone else to actually 
+            do an intro for you. Good luck with that.
+            <br><br>
+            4. Expensive pre-paid solutions don't really tell employers anything: So an employer sees that you've 
+            paid money to put yourself on the top of the applicant pile for all jobs generally. How do they know you're 
+            actually a good fit for their particular job? They don't. So either (a) they will still overlook you or (b) 
+            they will contact you and 90-95% likely decide you're not a good fit after all. Your time, and money, wasted. Again.
+            <br><br>
+            5. Expensive pre- or post-paid solutions shamelessly benefit wealthier job seekers: These systems are typically 
+            "promotional" in nature rather than truly functional "filter mechanisms" to accurately match job seekers with the 
+            perfect jobs for their particular skills. They effectively function like the eBay "promote your item" feature, where 
+            you can pay more to make your listing larger, show flashy icons, etc. LinkedIn even admits this: "Move your job 
+            applications to the top of the candidate list."
+            <br><br>
+            6. Psychologically & practically exhausting: If you really want to have any chance at the standard 
+            "job application-cum-résumé" approach, it requires a ton of work and effort and therefore time, and 
+            therefore money: diligently crafted résumés and cover letters must be custom-tailored for each and every 
+            position to which you're applying. This is exhausting, and psychologically draining: job seekers usually 
+            don't ever hear back from companies to which they applied. It's like when you were in high school (college?) 
+            and finally mustered up the courage to call that girl you wanted to take on a movie date, and when she didn't 
+            answer her phone, you decided it would be real manly to actually leave a message. The problem then is that you 
+            spent the next several hours or days pacing back and forth in agony waiting for either (a) her to finally call 
+            you back or (b) another three days to pass so that you could call her again. That sucked then, and it sucks now. 
+            With jobs, or with girls.
+            <br><br>
+            7. No automatic matching: Finally, there is no true automatic matching between job seekers and the best 
+            jobs for their particular skills. For example, this is the 21st century: a job seeker should be able to list 
+            their skills, abilities, professions, personal characteristics, personality type, and be automatically matched 
+            -- and contacted by -- an employer with the most relevant job for that particular person, for just a few dollars 
+            or so, if and only if the employer actually wants to contact that person. No applying, no waiting, no effort. 
+            That would be awesome.
+            <br><br>
+                
+            <br><br>
+            <label for="chbox2">Show Less</label>
+            </div>
+                
+            <label for="chbox2">Read More</label>
+            </div>  
+
+            <br><br>
+            <div class="post-row">
+                <div class="activity-icons">
+                    <div><img src="/FolderFoto/like.png"> 982k</div>
+                    <div><img src="/FolderFoto/comments.png"> 23k</div>
+                    <div><img src="/FolderFoto/share.png"> 200k</div>
+                </div>
+            </div>
+        </div>             
+
+
+
+        <script>
+            function search() {
+                var searchText = document.getElementById('searchInput').value.trim().toLowerCase();
+                var content = document.body; // Ganti dengan elemen tempat konten Anda
+                
+                // Remove previous highlights
+                var highlighted = content.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
+                content.innerHTML = highlighted;
+            
+                if (searchText === '') {
+                    return;
+                }
+            
+                var regex = new RegExp('(' + searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+                var matches = content.innerHTML.match(regex);
+            
+                if (matches) {
+                    var matchIndex = content.innerHTML.indexOf(matches[0]);
+                    content.innerHTML = content.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+            
+                    // Scroll to the first match
+                    var highlightedElement = document.querySelector('.highlight');
+                    highlightedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    alert('Not Found');
+                }
+            }
+            </script>
+
+</body>
+</html>

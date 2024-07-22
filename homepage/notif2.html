@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(175, 172, 167);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* BLUE BAR===================================================================================*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b5998;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0.5em;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.user-profile p{
+    margin-top: none;
+    margin-bottom: -5px;
+    font-weight: 500;
+    color: #3b5998;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.user-profile small{
+    font-size: 12px;
+}
+
+.post-container{
+    width: 65%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.user-profile span{
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.post-img{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin: auto;
+}
+
+.post-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity-icons div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.activity-icons div img{
+    width: 18px;
+    margin-right: 10px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+/* ================================================== */
+
+
+/* <<<<<<< HEAD */
+#search_box {
+    border-radius: 10px;
+}
+/* ======= */
+.search-container {
+        display: flex;
+    }
+.search-container input[type="text"] {
+        flex: 1;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+.search-container button {
+        background-color: #007bff;
+        color: white;
+        border: 1px solid #007bff;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        font-size: 14px;
+        outline: none;
+    }
+.search-container button:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+.highlight {
+        background-color: rgb(221, 248, 69);
+        font-weight: bold;
+    }
+/* //////// */
+
+.card2{
+    background-color: #fff;
+    border-radius: 10px;
+    line-height: 1,8;
+}
+
+#chbox2 {
+    display: none;
+}
+
+#chbox2:checked ~ .hide-content2{
+    display: block;
+}
+
+#chbox2:checked ~ label{
+    display: none;
+}
+
+.hide-content2{
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3b5998;
+    padding: 3px 13px;
+    border-radius: 3px;
+    margin-top: 12px;
+}
+
+
+
+
+/* >>>>>>>  */
+
+nav li {
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto 20px;
+    cursor: pointer;
+}
+
+#blue_bar_btn:hover{
+    background-color: black;
+}
+    </style>
+</head>
+<body style="background-color: rgb(175, 172, 167); background-image: url(FolderFoto/bglogin.jpg);">
+    <header>
+        <h1 style="cursor: pointer;">Quo-Run</h1>
+        <nav>
+            <ul style="padding-right: 1em;">
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Looking for something?">
+                    <button onclick="search()">Search</button>
+                </div>  
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="rumah.html">Home</a></li>
+                <li id="blue_bar_btn"><a style="color: white; text-decoration: none; font-weight: bold; font-size: 1em;" href="notification.html">Notification</a></li>
+
+                <a href="profil.html"><img src="/FolderFoto/member-6.png" style="width: 40px; float: right; border-radius: 50%; padding: 4px;"></a>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="post-container">
+
+        <div class="user-profile">
+            <img src="/FolderFoto/member-9.png" alt="">
+            <div class="uploader">
+                <p>Joko Agus</p>
+                <span>August 17 2019, 10:34 AM</span>
+            </div>
+        </div>
+            <img src="/FolderFoto/feed-image-21.jpg" class="post-img"><br><br>
+
+            <div class="card2">
+                <input id="chbox2" type="checkbox">
+            <strong style="cursor: pointer;">Is flexing important? what are the advantages?</strong>
+            <br><br>
+            flex
+            <br><br>
+            [fleks]
+            
+            VERB
+            <br><br>
+            (with reference to a limb or joint)
+            <br><br>
+            bend or become bent.
+            <br><br>
+            <div class="hide-content2">
+            "she saw him flex his ankle and wince"
+            <br><br>
+            synonyms: bend · curve · crook · hook · cock · angle · kink · buckle · double up
+            <br><br>
+            put a (skill, talent, or ability) to use.
+            <br><br>
+            "the talks were seen as a way for Mary to flex her well-known diplomatic prowess"
+            <br><br>
+            NOUN
+            <br><br>
+            the action or state of flexing.
+            <br><br>
+            "add rigidity and eliminate brake flex"
+            <br><br>
+            US informal - a boastful statement or display.
+            <br><br>
+                
+            <br><br>
+            <label for="chbox2">Show Less</label>
+            </div>
+                
+            <label for="chbox2">Read More</label>
+            </div>  
+
+            <br><br>
+            <div class="post-row">
+                <div class="activity-icons">
+                    <div><img src="/FolderFoto/like.png"> 102k</div>
+                    <div><img src="/FolderFoto/comments.png"> 450k</div>
+                    <div><img src="/FolderFoto/share.png"> 20k</div>
+                </div>
+            </div>
+        </div>             
+
+
+
+        <script>
+            function search() {
+                var searchText = document.getElementById('searchInput').value.trim().toLowerCase();
+                var content = document.body; // Ganti dengan elemen tempat konten Anda
+                
+                // Remove previous highlights
+                var highlighted = content.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
+                content.innerHTML = highlighted;
+            
+                if (searchText === '') {
+                    return;
+                }
+            
+                var regex = new RegExp('(' + searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+                var matches = content.innerHTML.match(regex);
+            
+                if (matches) {
+                    var matchIndex = content.innerHTML.indexOf(matches[0]);
+                    content.innerHTML = content.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+            
+                    // Scroll to the first match
+                    var highlightedElement = document.querySelector('.highlight');
+                    highlightedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    alert('Not Found');
+                }
+            }
+            </script>
+
+</body>
+</html>

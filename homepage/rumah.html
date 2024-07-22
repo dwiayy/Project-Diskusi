@@ -85,51 +85,99 @@ nav li {
 /* BLUE BAR=================================================================================== */
 
 /* Slider Animation */
-.slider{
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+
+* {box-sizing:border-box}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-.slider img{
-    width: 75%;
-    display: none;
-    margin: auto;
-    border-radius: 1.5em;
-    margin-top: 0.5em;
+
+.mySlides {
+  display: none;
 }
 
-img.displaySlide{
-    display: block;
-    animation-name: fade;
-    animation-duration: 1.5s;
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.slider button{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1rem;
-    padding: 10px 15px;
-    background-color: white;
-    color:#3b5998;
-    border: none;
-    cursor: pointer;
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-.prev{
-    left: 0;
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
-.next{
-    right: 0;
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 2em;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  float: left;
+  background-color: #3b5998;
 }
 
-@keyframes fade{
-    from {opacity: .5}
-    to {opacity: 1;}
+.numbertext {
+  color: #3b5998;
+  font-size: 2em;
+  padding: 8px 10px;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  border-radius: 10px;
 }
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+
 /* =================================== */
 
 .user-profile{
@@ -354,18 +402,51 @@ label {
         </nav>
     </header>
 
-    <div class="slider">
-        <div class="slides">
-            <div> <span></span>
-            <img class="slide" src="/FolderFoto/feed-image-1.png">
-            <img class="slide" src="/FolderFoto/feed-image-4.png">
-            <img class="slide" src="/FolderFoto/feed-image-3.png">
-            <img class="slide" src="/FolderFoto/feed-image-2.png">
-            </div>
-        </div>
-        <button class="prev" onclick="prevSlide()">&#10094</button>
-        <button class="next" onclick="nextSlide()">&#10095</button>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    
+    <div class="mySlides fade">
+      <div class="numbertext">#1 Most Visited</div>
+      <img src="/FolderFoto/feed-image-1.png" style="width: 100%; border-radius: 10px; ">
+      <a href="notif3.html"><div class="text">Why lot of teenagers have difficulty finding a job?</div></a>
     </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">#2 Most Visited</div>
+      <img src="/FolderFoto/feed-image-2.png" style="width: 100%; border-radius: 10px; ">
+      <a href="notif4.html"><div class="text">What are simple attitudes that liked by others?</div></a>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">#3 Most Visited</div>
+      <img src="/FolderFoto/feed-image-3.png" style="width: 100%; border-radius: 10px; ">
+      <a href="notif5.html"><div class="text">Why we should become a good person?</div></a>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">#4 Most Visited</div>
+        <img src="/FolderFoto/feed-image-4.png" style="width: 100%; border-radius: 10px; ">
+        <a href="notif6.html"><div class="text">Has anyone regretted getting married immediately after the ceremony?</div></a>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+    
+
+        
 
 <!-- post number 0 -->
     <div class="post-container">
@@ -655,48 +736,32 @@ label {
 
 
     <script>
-        const slides = document.querySelectorAll(".slides img")
-        let slideIndex = 0;
-        let intervalId = null;
+            let slideIndex = 0;
+            showSlides();
 
-
-        // initializeSlider();
-        document.addEventListener("DOMContentLoaded", initializeSlider);
-
-        function initializeSlider(){
-            if(slides.length > 0){
-                slides[slideIndex].classList.add("displaySlide");
-                intervalId = setInterval(nextSlide, 5000);
-            }
-        }
-        function showSlide(index){
-
-            if(index >= slides.length){
-                slideIndex = 0;
-
+            
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
             }
 
-            else if(index < 0){
-                slideIndex = slides.length -1;
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
             }
 
-            slides.forEach(slide => {
-                slide.classList.remove("displaySlide");
-            });
-
-            slides[slideIndex].classList.add("displaySlide");
-        }
-        function prevSlide(){
-            clearInterval(intervalId);
-            slideIndex--;
-            showSlide(slideIndex);
-        }
-        function nextSlide(){
-
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
             slideIndex++;
-            showSlide(slideIndex);
-        }
+                if (slideIndex > slides.length) {slideIndex = 1}
+                    slides[slideIndex-1].style.display = "block";
+                    setTimeout(showSlides, 5000); // Change image every 2 seconds
+                }   
 
+
+        
 
         
         function search() {
@@ -722,13 +787,13 @@ label {
                 var highlightedElement = document.querySelector('.highlight');
                 highlightedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } else {
-                alert('Tidak ada hasil yang ditemukan');
+                alert('Not Found');
             }
         }
         </script>
 
         
->>>>>>> 79862fad2bdd57a782555a5310e21ae813410be1
+
 </body>
 </html>
 
